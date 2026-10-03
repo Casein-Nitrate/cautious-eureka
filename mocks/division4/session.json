@@ -1,0 +1,21 @@
+{
+  "session_id": "S123",
+  "family_context": {
+    "district": "Nashik",
+    "state": "Maharashtra",
+    "learner_education": "Class 12",
+    "income_bracket": "10k-20k",
+    "trades_of_interest": ["Electrician", "Solar Technician"],
+    "speakers_present": ["learner", "parent"],
+    "preferred_language": "mr"
+  },
+  "concern_state": {
+    "income": { "status": "not_raised", "intents": {} },
+    "employment": { "status": "not_raised", "intents": {} },
+    "safety": { "status": "not_raised", "intents": {} },
+    "social_perception": { "status": "not_raised", "intents": {} },
+    "education_progression": { "status": "not_raised", "intents": {} },
+    "gender_family": { "status": "not_raised", "intents": {} },
+    "information_gap": { "status": "not_raised", "intents": {} }
+  }
+}

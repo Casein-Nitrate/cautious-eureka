@@ -1,0 +1,11 @@
+{
+  "total_sessions": 1240,
+  "sessions_with_concerns": 730,
+  "concerns_resolved": 510,
+  "concerns_unresolved": 220,
+  "escalated": 94,
+  "top_concern_category": "income",
+  "top_concern_intent": "starting_salary",
+  "ai_resolution_rate": 0.72,
+  "resistance_rate": 0.30
+}

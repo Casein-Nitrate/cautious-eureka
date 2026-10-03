@@ -1,0 +1,51 @@
+{
+  "session_id": "S123",
+  "created_at": "2026-10-02T09:00:00Z",
+  "family_context": {
+    "district": "Nashik",
+    "state": "Maharashtra",
+    "learner_education": "Class 12",
+    "income_bracket": "10k-20k",
+    "trades_of_interest": ["Electrician", "Solar Technician"],
+    "speakers_present": ["learner", "parent"],
+    "preferred_language": "mr"
+  },
+  "messages": [
+    {
+      "message_id": "M456",
+      "session_id": "S123",
+      "speaker": "parent",
+      "message_type": "user",
+      "text_original": "या कोर्सनंतर माझ्या मुलाला नोकरी मिळेल का?",
+      "text_english": "Will my child get a job after this course?",
+      "language": "mr",
+      "timestamp": "2026-10-02T09:02:00Z"
+    },
+    {
+      "message_id": "M457",
+      "session_id": "S123",
+      "speaker": null,
+      "message_type": "assistant",
+      "text_original": "Based on verified outcome data for Solar Technician in Maharashtra, the placement rate is 78%.",
+      "text_english": "Based on verified outcome data for Solar Technician in Maharashtra, the placement rate is 78%.",
+      "language": "mr",
+      "timestamp": "2026-10-02T09:02:01Z"
+    }
+  ],
+  "concern_state": {
+    "income": { "status": "not_raised", "intents": {} },
+    "employment": {
+      "status": "partially_resolved",
+      "intents": {
+        "placement_probability": "resolved"
+      }
+    },
+    "safety": { "status": "not_raised", "intents": {} },
+    "social_perception": { "status": "not_raised", "intents": {} },
+    "education_progression": { "status": "not_raised", "intents": {} },
+    "gender_family": { "status": "not_raised", "intents": {} },
+    "information_gap": { "status": "not_raised", "intents": {} }
+  },
+  "escalated": false,
+  "escalation_id": null
+}
