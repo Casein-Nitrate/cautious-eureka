@@ -127,12 +127,17 @@ from app.routers import sessions, counsellor
 from app.routers.internal_session import router as internal_session_router
 from app.routers.language import router as language_router
 from app.routers.evidence import router as evidence_router
+from app.routers.counselling import router as counselling_router
+from app.routers.analytics import router as analytics_router
 
 app.include_router(sessions.router, prefix="/api", tags=["sessions"])
 app.include_router(counsellor.router, prefix="/api", tags=["counsellor"])
 app.include_router(internal_session_router, tags=["internal"])
 app.include_router(language_router, tags=["internal-language"])
 app.include_router(evidence_router, tags=["evidence"])
+app.include_router(counselling_router, prefix="/api", tags=["counselling"])
+app.include_router(analytics_router, prefix="/api", tags=["analytics"])
+
 
 
 if __name__ == "__main__":

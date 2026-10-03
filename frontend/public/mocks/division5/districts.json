@@ -1,0 +1,76 @@
+{
+  "districts": [
+    {
+      "district": "Nashik",
+      "state": "Maharashtra",
+      "total_sessions": 147,
+      "resistance_rate": 0.72,
+      "top_concern_category": "employment",
+      "top_concern_intent": "local_jobs",
+      "escalation_rate": 0.31
+    },
+    {
+      "district": "Pune",
+      "state": "Maharashtra",
+      "total_sessions": 203,
+      "resistance_rate": 0.54,
+      "top_concern_category": "income",
+      "top_concern_intent": "starting_salary",
+      "escalation_rate": 0.18
+    },
+    {
+      "district": "Aurangabad",
+      "state": "Maharashtra",
+      "total_sessions": 118,
+      "resistance_rate": 0.68,
+      "top_concern_category": "social_perception",
+      "top_concern_intent": "status_of_trade",
+      "escalation_rate": 0.27
+    },
+    {
+      "district": "Nagpur",
+      "state": "Maharashtra",
+      "total_sessions": 96,
+      "resistance_rate": 0.61,
+      "top_concern_category": "safety",
+      "top_concern_intent": "gender_safety",
+      "escalation_rate": 0.42
+    },
+    {
+      "district": "Kolhapur",
+      "state": "Maharashtra",
+      "total_sessions": 87,
+      "resistance_rate": 0.48,
+      "top_concern_category": "income",
+      "top_concern_intent": "long_term_earning",
+      "escalation_rate": 0.14
+    },
+    {
+      "district": "Solapur",
+      "state": "Maharashtra",
+      "total_sessions": 74,
+      "resistance_rate": 0.65,
+      "top_concern_category": "employment",
+      "top_concern_intent": "employer_availability",
+      "escalation_rate": 0.33
+    },
+    {
+      "district": "Amravati",
+      "state": "Maharashtra",
+      "total_sessions": 61,
+      "resistance_rate": 0.57,
+      "top_concern_category": "gender_family",
+      "top_concern_intent": "suitability_for_daughter",
+      "escalation_rate": 0.38
+    },
+    {
+      "district": "Jalgaon",
+      "state": "Maharashtra",
+      "total_sessions": 55,
+      "resistance_rate": 0.44,
+      "top_concern_category": "information_gap",
+      "top_concern_intent": "course_content",
+      "escalation_rate": 0.11
+    }
+  ]
+}

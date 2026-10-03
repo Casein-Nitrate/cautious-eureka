@@ -1,0 +1,76 @@
+{
+  "trades": [
+    {
+      "trade": "Solar Technician",
+      "total_sessions": 203,
+      "resistance_rate": 0.61,
+      "top_concern_category": "income",
+      "top_concern_intent": "starting_salary",
+      "ai_resolution_rate": 0.72,
+      "escalation_rate": 0.28
+    },
+    {
+      "trade": "Electrician",
+      "total_sessions": 187,
+      "resistance_rate": 0.43,
+      "top_concern_category": "employment",
+      "top_concern_intent": "placement_probability",
+      "ai_resolution_rate": 0.81,
+      "escalation_rate": 0.19
+    },
+    {
+      "trade": "Plumber",
+      "total_sessions": 142,
+      "resistance_rate": 0.55,
+      "top_concern_category": "social_perception",
+      "top_concern_intent": "status_of_trade",
+      "ai_resolution_rate": 0.63,
+      "escalation_rate": 0.37
+    },
+    {
+      "trade": "Beauty & Wellness",
+      "total_sessions": 134,
+      "resistance_rate": 0.69,
+      "top_concern_category": "gender_family",
+      "top_concern_intent": "suitability_for_daughter",
+      "ai_resolution_rate": 0.51,
+      "escalation_rate": 0.49
+    },
+    {
+      "trade": "Welder",
+      "total_sessions": 119,
+      "resistance_rate": 0.58,
+      "top_concern_category": "safety",
+      "top_concern_intent": "workplace_safety",
+      "ai_resolution_rate": 0.67,
+      "escalation_rate": 0.33
+    },
+    {
+      "trade": "Healthcare Assistant",
+      "total_sessions": 98,
+      "resistance_rate": 0.39,
+      "top_concern_category": "education_progression",
+      "top_concern_intent": "further_education",
+      "ai_resolution_rate": 0.88,
+      "escalation_rate": 0.12
+    },
+    {
+      "trade": "Retail Associate",
+      "total_sessions": 87,
+      "resistance_rate": 0.47,
+      "top_concern_category": "income",
+      "top_concern_intent": "long_term_earning",
+      "ai_resolution_rate": 0.74,
+      "escalation_rate": 0.26
+    },
+    {
+      "trade": "HVAC Technician",
+      "total_sessions": 71,
+      "resistance_rate": 0.52,
+      "top_concern_category": "information_gap",
+      "top_concern_intent": "course_content",
+      "ai_resolution_rate": 0.79,
+      "escalation_rate": 0.21
+    }
+  ]
+}

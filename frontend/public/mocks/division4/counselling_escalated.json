@@ -1,0 +1,51 @@
+{
+  "message_id": "M460",
+  "response": "I understand your concern about safety for your daughter in this trade. While I can share general safety standards, I don't have specific local employer safety records for Nashik. A human counsellor will be able to provide more detailed, location-specific information.",
+  "response_translated": "मला तुमच्या मुलीच्या सुरक्षिततेची काळजी समजते. एक मानवी समुपदेशक नाशिकसाठी अधिक तपशीलवार माहिती देऊ शकेल.",
+  "concern": {
+    "category": "safety",
+    "intent": "gender_safety",
+    "confidence": 0.88,
+    "raw_text": "Is this trade safe for a girl?"
+  },
+  "evidence": [],
+  "concern_state": {
+    "income": { "status": "not_raised", "intents": {} },
+    "employment": {
+      "status": "resolved",
+      "intents": {
+        "placement_probability": "resolved"
+      }
+    },
+    "safety": {
+      "status": "partially_resolved",
+      "intents": {
+        "gender_safety": "open"
+      }
+    },
+    "social_perception": { "status": "not_raised", "intents": {} },
+    "education_progression": { "status": "not_raised", "intents": {} },
+    "gender_family": { "status": "not_raised", "intents": {} },
+    "information_gap": { "status": "not_raised", "intents": {} }
+  },
+  "escalated": true,
+  "escalation_id": "ESC001",
+  "counsellor_brief": {
+    "learner_education": "Class 12",
+    "district": "Nashik",
+    "state": "Maharashtra",
+    "trade_interest": ["Solar Technician"],
+    "primary_concern_category": "safety",
+    "primary_concern_intent": "gender_safety",
+    "secondary_concern_category": "employment",
+    "secondary_concern_intent": "placement_probability",
+    "data_already_shown": [
+      "placement_rate",
+      "earnings_range",
+      "career_progression"
+    ],
+    "concern_status": "partially_resolved",
+    "escalation_reason": "local_employer_safety_data_unavailable",
+    "recommended_action": "Discuss workplace safety standards and female-friendly employers for Solar Technician in Nashik district"
+  }
+}

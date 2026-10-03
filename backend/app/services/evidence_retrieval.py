@@ -83,28 +83,44 @@ async def retrieve_evidence(
     """
     t_start = time.time()
 
-    # ── Phase 1: Filtering ────────────────────────────────────────────────
+    # ── Phase 1 & 2: Hierarchical Filtering ──────────────────────────────
     t_db_start = time.time()
-    filters = []
+    
+    # Priority 1: Trade + District + State
+    # Priority 2: Trade + State
+    # Priority 3: Trade only
+    # Priority 4: All evidence
+    filter_levels = []
+    if trade and district and state:
+        filter_levels.append([EvidenceModel.trade == trade, EvidenceModel.district == district, EvidenceModel.state == state])
+    if trade and state:
+        filter_levels.append([EvidenceModel.trade == trade, EvidenceModel.state == state])
     if trade:
-        filters.append(EvidenceModel.trade == trade)
-    if district:
-        filters.append(EvidenceModel.district == district)
-    if state:
-        filters.append(EvidenceModel.state == state)
+        filter_levels.append([EvidenceModel.trade == trade])
+    filter_levels.append([])  # Fallback to entire repository
 
-    # ── Phase 2: Gender Context Priority ──────────────────────────────────
-    if concern_category == "gender_family":
-        filters.append(EvidenceModel.female_enrollment_pct.isnot(None))
-        filters.append(EvidenceModel.safety_infrastructure.isnot(None))
+    candidate_ids = []
+    for level_filters in filter_levels:
+        cur_filters = list(level_filters)
+        if concern_category == "gender_family":
+            # For gender/family concerns, prioritize records that have female/safety stats if available
+            gender_filters = cur_filters + [EvidenceModel.female_enrollment_pct.isnot(None)]
+            q = select(EvidenceModel.evidence_id).where(and_(*gender_filters)) if gender_filters else select(EvidenceModel.evidence_id)
+            res = await db.execute(q)
+            rows = [r[0] for r in res.fetchall()]
+            if rows:
+                candidate_ids = rows
+                break
 
-    # Query candidate evidence_ids
-    query = select(EvidenceModel.evidence_id)
-    if filters:
-        query = query.where(and_(*filters))
+        q = select(EvidenceModel.evidence_id)
+        if cur_filters:
+            q = q.where(and_(*cur_filters))
+        res = await db.execute(q)
+        rows = [r[0] for r in res.fetchall()]
+        if rows:
+            candidate_ids = rows
+            break
 
-    result = await db.execute(query)
-    candidate_ids = [row[0] for row in result.fetchall()]
     t_db_filter = time.time() - t_db_start
 
     if not candidate_ids:

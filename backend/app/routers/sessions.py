@@ -11,6 +11,8 @@ import logging
 
 from app.database import get_db
 from app.models.session import Session, Message, EvidenceShown, Concern
+from app.models.evidence import EvidenceModel
+from app.schemas.evidence import RealityCheck
 from app.schemas.session import (
     SessionCreate,
     SessionResponse,
@@ -313,24 +315,49 @@ async def get_session_evidence(
         evidence_result = await db.execute(evidence_stmt)
         evidence_records = evidence_result.scalars().all()
         
+        # Batch lookup from evidence_repository if records exist
+        evidence_ids = [ev.evidence_id for ev in evidence_records]
+        repo_map = {}
+        if evidence_ids:
+            repo_stmt = select(EvidenceModel).where(EvidenceModel.evidence_id.in_(evidence_ids))
+            repo_result = await db.execute(repo_stmt)
+            for item in repo_result.scalars().all():
+                repo_map[item.evidence_id] = item
+
         # Convert to response schema
-        evidence_responses = [
-            EvidenceResponse(
-                evidence_id=ev.evidence_id,
-                trade=ev.trade,
-                district=ev.district,
-                state=ev.state,
-                placement_rate=ev.placement_rate,
-                earnings_min=ev.earnings_min,
-                earnings_max=ev.earnings_max,
-                currency=ev.currency,
-                data_source=ev.data_source,
-                data_period=ev.data_period,
-                nsqf_level=ev.nsqf_level,
-                progression_path=ev.progression_path
+        evidence_responses = []
+        for ev in evidence_records:
+            repo_item = repo_map.get(ev.evidence_id)
+            female_enrollment_pct = repo_item.female_enrollment_pct if repo_item else None
+            safety_infrastructure = repo_item.safety_infrastructure if repo_item else None
+            reality_check = None
+            if repo_item and any([repo_item.physical_demand, repo_item.typical_day, repo_item.trainee_quote, repo_item.trainee_quote_source]):
+                reality_check = RealityCheck(
+                    physical_demand=repo_item.physical_demand,
+                    typical_day=repo_item.typical_day,
+                    trainee_quote=repo_item.trainee_quote,
+                    trainee_quote_source=repo_item.trainee_quote_source
+                )
+
+            evidence_responses.append(
+                EvidenceResponse(
+                    evidence_id=ev.evidence_id,
+                    trade=ev.trade,
+                    district=ev.district,
+                    state=ev.state,
+                    placement_rate=ev.placement_rate,
+                    earnings_min=ev.earnings_min,
+                    earnings_max=ev.earnings_max,
+                    currency=ev.currency,
+                    data_source=ev.data_source,
+                    data_period=ev.data_period,
+                    nsqf_level=ev.nsqf_level,
+                    progression_path=ev.progression_path,
+                    female_enrollment_pct=female_enrollment_pct,
+                    safety_infrastructure=safety_infrastructure,
+                    reality_check=reality_check
+                )
             )
-            for ev in evidence_records
-        ]
         
         return EvidenceHistoryResponse(
             session_id=session_id,

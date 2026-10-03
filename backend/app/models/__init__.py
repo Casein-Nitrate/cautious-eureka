@@ -10,6 +10,7 @@ from app.models.session import (
     Escalation
 )
 from app.models.evidence import EvidenceModel
+from app.models.analytics import AnalyticsEvent
 
 __all__ = [
     "Session",
@@ -18,4 +19,6 @@ __all__ = [
     "EvidenceShown",
     "Escalation",
     "EvidenceModel",
+    "AnalyticsEvent",
 ]
+

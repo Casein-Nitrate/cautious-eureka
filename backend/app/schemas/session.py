@@ -145,6 +145,9 @@ class ConcernStateResponse(BaseModel):
     concern_state: ConcernState = Field(..., description="Current concern state")
 
 
+from app.schemas.evidence import RealityCheck
+
+
 # ===== Evidence Schemas =====
 
 class EvidenceResponse(BaseModel):
@@ -161,6 +164,9 @@ class EvidenceResponse(BaseModel):
     data_period: Optional[str] = Field(None, description="Data collection period")
     nsqf_level: Optional[str] = Field(None, description="NSQF qualification level")
     progression_path: Optional[List[str]] = Field(None, description="Career progression path")
+    female_enrollment_pct: Optional[str] = Field(None, description="Female enrollment percentage")
+    safety_infrastructure: Optional[str] = Field(None, description="Safety infrastructure details")
+    reality_check: Optional[RealityCheck] = Field(None, description="Reality check details")
     
     @field_validator('earnings_min', 'earnings_max')
     @classmethod

@@ -1,0 +1,84 @@
+{
+  "concerns": [
+    {
+      "category": "income",
+      "total_raised": 471,
+      "intent_breakdown": {
+        "starting_salary": 287,
+        "long_term_earning": 102,
+        "salary_comparison": 54,
+        "return_on_training": 28
+      },
+      "ai_resolution_rate": 0.72,
+      "escalation_rate": 0.28
+    },
+    {
+      "category": "employment",
+      "total_raised": 394,
+      "intent_breakdown": {
+        "placement_probability": 198,
+        "local_jobs": 112,
+        "employer_availability": 54,
+        "job_security": 30
+      },
+      "ai_resolution_rate": 0.81,
+      "escalation_rate": 0.19
+    },
+    {
+      "category": "safety",
+      "total_raised": 218,
+      "intent_breakdown": {
+        "workplace_safety": 94,
+        "gender_safety": 87,
+        "travel_safety": 37
+      },
+      "ai_resolution_rate": 0.51,
+      "escalation_rate": 0.49
+    },
+    {
+      "category": "social_perception",
+      "total_raised": 187,
+      "intent_breakdown": {
+        "status_of_trade": 98,
+        "peer_comparison": 54,
+        "family_acceptance": 35
+      },
+      "ai_resolution_rate": 0.63,
+      "escalation_rate": 0.37
+    },
+    {
+      "category": "education_progression",
+      "total_raised": 143,
+      "intent_breakdown": {
+        "nsqf_levels": 67,
+        "further_education": 48,
+        "degree_equivalence": 28
+      },
+      "ai_resolution_rate": 0.88,
+      "escalation_rate": 0.12
+    },
+    {
+      "category": "gender_family",
+      "total_raised": 121,
+      "intent_breakdown": {
+        "suitability_for_daughter": 71,
+        "family_approval": 32,
+        "migration_concern": 18
+      },
+      "ai_resolution_rate": 0.54,
+      "escalation_rate": 0.46
+    },
+    {
+      "category": "information_gap",
+      "total_raised": 98,
+      "intent_breakdown": {
+        "course_content": 41,
+        "duration": 27,
+        "fees": 19,
+        "eligibility": 11
+      },
+      "ai_resolution_rate": 0.91,
+      "escalation_rate": 0.09
+    }
+  ]
+}

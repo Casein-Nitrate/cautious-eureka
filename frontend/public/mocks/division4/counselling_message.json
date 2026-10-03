@@ -1,0 +1,50 @@
+{
+  "message_id": "M457",
+  "response": "Based on verified outcome data for Solar Technician in Maharashtra, the placement rate is 78% and average monthly earnings range from ₹18,000 to ₹26,000. Many graduates find employment with local solar installation companies within 3 months of completing the course.",
+  "response_translated": "महाराष्ट्रातील सोलर तंत्रज्ञ पदवीधरांसाठी नोकरीचा दर ७८% आहे आणि मासिक कमाई ₹१८,००० ते ₹२६,००० आहे.",
+  "concern": {
+    "category": "employment",
+    "intent": "placement_probability",
+    "confidence": 0.91,
+    "raw_text": "Will my child actually get a job after this?"
+  },
+  "evidence": [
+    {
+      "evidence_id": "EV001",
+      "trade": "Solar Technician",
+      "district": "Nashik",
+      "state": "Maharashtra",
+      "placement_rate": "78%",
+      "earnings_min": 18000,
+      "earnings_max": 26000,
+      "currency": "INR",
+      "data_source": "MSDE Outcome Dataset",
+      "data_period": "2024-25",
+      "nsqf_level": "Level 4",
+      "progression_path": [
+        "Helper",
+        "Technician",
+        "Senior Technician",
+        "Supervisor",
+        "NSQF Level 5"
+      ]
+    }
+  ],
+  "concern_state": {
+    "income": { "status": "not_raised", "intents": {} },
+    "employment": {
+      "status": "partially_resolved",
+      "intents": {
+        "placement_probability": "resolved"
+      }
+    },
+    "safety": { "status": "not_raised", "intents": {} },
+    "social_perception": { "status": "not_raised", "intents": {} },
+    "education_progression": { "status": "not_raised", "intents": {} },
+    "gender_family": { "status": "not_raised", "intents": {} },
+    "information_gap": { "status": "not_raised", "intents": {} }
+  },
+  "escalated": false,
+  "escalation_id": null,
+  "counsellor_brief": null
+}

@@ -1,0 +1,45 @@
+{
+  "session_id": "S123",
+  "evidence_shown": [
+    {
+      "evidence_id": "EV001",
+      "trade": "Solar Technician",
+      "district": "Nashik",
+      "state": "Maharashtra",
+      "placement_rate": "78%",
+      "earnings_min": 18000,
+      "earnings_max": 26000,
+      "currency": "INR",
+      "data_source": "MSDE Outcome Dataset",
+      "data_period": "2024-25",
+      "nsqf_level": "Level 4",
+      "progression_path": [
+        "Helper",
+        "Technician",
+        "Senior Technician",
+        "Supervisor",
+        "NSQF Level 5"
+      ]
+    },
+    {
+      "evidence_id": "EV002",
+      "trade": "Electrician",
+      "district": "Nashik",
+      "state": "Maharashtra",
+      "placement_rate": "82%",
+      "earnings_min": 15000,
+      "earnings_max": 28000,
+      "currency": "INR",
+      "data_source": "MSDE Outcome Dataset",
+      "data_period": "2024-25",
+      "nsqf_level": "Level 3",
+      "progression_path": [
+        "Helper Electrician",
+        "Electrician",
+        "Senior Electrician",
+        "Supervisor",
+        "NSQF Level 4"
+      ]
+    }
+  ]
+}

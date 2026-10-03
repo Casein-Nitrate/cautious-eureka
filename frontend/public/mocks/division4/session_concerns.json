@@ -1,0 +1,18 @@
+{
+  "session_id": "S123",
+  "concern_state": {
+    "income": { "status": "not_raised", "intents": {} },
+    "employment": {
+      "status": "partially_resolved",
+      "intents": {
+        "placement_probability": "resolved",
+        "local_jobs": "open"
+      }
+    },
+    "safety": { "status": "not_raised", "intents": {} },
+    "social_perception": { "status": "not_raised", "intents": {} },
+    "education_progression": { "status": "not_raised", "intents": {} },
+    "gender_family": { "status": "not_raised", "intents": {} },
+    "information_gap": { "status": "not_raised", "intents": {} }
+  }
+}
